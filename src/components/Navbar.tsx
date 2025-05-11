@@ -118,9 +118,14 @@ export const Navbar = ({ ...data }: HeaderType) => {
 								? 'animate-[var(--slide-left)]'
 								: 'animate-[var(--slide-right)]'
 						}`}>
-						<Link href='/'>Home</Link>
-						<Link href='/work'>Work</Link>
-						<Link href='/contact'>Contact</Link>
+						{data.navigationItems.map((item) => (
+							<Link
+								key={item.label}
+								href={item.link}
+								className='text-white h-6 mt-0 pl-[13px] pr-[13px] no-underline hover:text-[#aab8b3] rounded-none visited:#aab8b3'>
+								{item.label}
+							</Link>
+						))}
 					</div>
 				)}
 			</div>
