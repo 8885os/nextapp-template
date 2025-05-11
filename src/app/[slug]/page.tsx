@@ -68,8 +68,7 @@ export default async function CMSPage({
 				?.layout?.map(
 					// eslint-disable-next-line @typescript-eslint/no-explicit-any
 					(block: any, index: number) => {
-						console.log(block)
-
+						//console.log(block)
 						return renderBlock(block, index)
 					}
 				)}
